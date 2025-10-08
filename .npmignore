@@ -1,0 +1,4 @@
+.vscode/
+tests/
+src/dev-scripts/
+.env

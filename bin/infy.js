@@ -3,13 +3,19 @@ import { Command } from 'commander';
 import { generateCommand } from '../src/commands/generate.js';
 import showInfo from '../src/commands/info.js';
 import createConfig from '../src/commands/init.js';
+import { packageVersion } from '../src/utils/get-version.js'
 
 const program = new Command();
 
 program
     .name('infy')
     .description('Custom React CLI Tool')
-    .version('1.0.0');
+    .version(packageVersion);
+
+program.command('v')
+    .action(() => {
+        console.log(packageVersion)
+    })
 
 program
     .command('g <type> <name>')
@@ -21,14 +27,14 @@ program
     });
 
 program
-  .command('config')
-  .description('Create CLI config file (.infyrc.json)')
-  .action(createConfig);
+    .command('init')
+    .description('Create CLI config file (.infyrc.json)')
+    .action(createConfig);
 
 program
-  .command('info')
-  .description('Show CLI info')
-  .action(showInfo);
+    .command('info')
+    .description('Show CLI info')
+    .action(showInfo);
 
 
 program.parse(process.argv);
