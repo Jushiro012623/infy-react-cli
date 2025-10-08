@@ -21,7 +21,7 @@ export async function generateCommand(type, name, options) {
         return false;
     }
 
-    const blueprint = Blueprint.generate(type, name, ext);
+    const blueprint = await Blueprint.generate(type, name, ext);
 
     if (!blueprint) {
         return

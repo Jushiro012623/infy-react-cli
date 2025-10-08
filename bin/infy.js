@@ -2,6 +2,7 @@
 import { Command } from 'commander';
 import { generateCommand } from '../src/commands/generate.js';
 import showInfo from '../src/commands/info.js';
+import createConfig from '../src/commands/init.js';
 
 const program = new Command();
 
@@ -18,6 +19,11 @@ program
     .action((type, name, options) => {
         generateCommand(type, name, options);
     });
+
+program
+  .command('config')
+  .description('Create CLI config file (.infyrc.json)')
+  .action(createConfig);
 
 program
   .command('info')
