@@ -1,0 +1,31 @@
+{
+    "name": "infy-react-cli",
+    "version": "1.0.0",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "Ivan Macabontoc",
+    "license": "MIT",
+    "description": "A lightweight CLI to generate React components, hooks, pages, and providers instantly.",
+    "dependencies": {
+        "chalk": "^5.6.2",
+        "commander": "^14.0.1",
+        "fs-extra": "^11.3.2",
+        "inquirer": "^12.9.6"
+    },
+    "bin": {
+        "infy": "./bin/infy.js"
+    },
+    "devDependencies": {
+        "@types/node": "^24.7.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.9.3"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/infinity-team/infy-react-cli.git"
+    }
+}
