@@ -66,18 +66,6 @@ Creates:
 src/components/Button.jsx
 ```
 
-### Specify File Extension
-
-```bash
-infy g component Button -e tsx
-```
-
-Creates:
-
-```
-src/components/Button.tsx
-```
-
 ### Other Generators
 
 | Type        | Example Command               | Output Path                    |
@@ -147,7 +135,6 @@ Now, all generated files will follow your custom folder structure
 **Ivan Dev**
 
 > Built for fast React development.
-
 ---
 
 ## 🪪 License
