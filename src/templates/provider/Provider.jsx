@@ -7,7 +7,7 @@ const __NAME__Provider = ({ children }) => {
     const [state, setState] = useState(null);
 
     return (
-        <__NAME__.Provider value={state} >
+        <__NAME__.Provider value={{state, setState}} >
             {children}
         </__NAME__.Provider>
     );

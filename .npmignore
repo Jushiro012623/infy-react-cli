@@ -2,3 +2,4 @@
 tests/
 src/dev-scripts/
 .env
+.idea

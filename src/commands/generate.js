@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import Blueprint from "../factory/Blueprint.js";
 import { readAndReplace, writeFile } from '../utils/file.js';
 
-export async function generateCommand(type, name, options) {
+export async function generateCommand(type, name) {
 
     if (!type || !name) {
         console.log(chalk.red('❌ Usage: infy g <type> <name>'));
@@ -12,16 +12,8 @@ export async function generateCommand(type, name, options) {
         return;
     }
 
-    const ext = options.extension.toLowerCase();
     const parsedName = path.basename(name);
-
-    if (!['js', 'jsx', 'ts', 'tsx'].includes(ext)) {
-        console.log(chalk.red(`❌ Invalid extension: ${ext}`));
-        console.log(chalk.gray('Valid extensions: js, jsx, ts, tsx'));
-        return false;
-    }
-
-    const blueprint = await Blueprint.generate(type, name, ext);
+    const blueprint = await Blueprint.generate(type, name);
 
     if (!blueprint) {
         return

@@ -9,7 +9,8 @@ export default async function createConfig() {
       component: 'src/components',
       hook: 'src/hooks',
       page: 'src/pages'
-    }
+    },
+    extension: 'jsx'
   };
 
   try {

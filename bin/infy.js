@@ -12,18 +12,12 @@ program
     .description('Custom React CLI Tool')
     .version(packageVersion);
 
-program.command('v')
-    .action(() => {
-        console.log(packageVersion)
-    })
-
 program
     .command('g <type> <name>')
     .alias('generate')
-    .option('-e, --extension <extension>', 'Specify file extension (js, jsx, ts, tsx)', 'jsx')
     .description('Generate a component, hook, or page')
-    .action((type, name, options) => {
-        generateCommand(type, name, options);
+    .action((type, name) => {
+        generateCommand(type, name);
     });
 
 program
